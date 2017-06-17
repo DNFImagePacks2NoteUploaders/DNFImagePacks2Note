@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="author" content="JS" />
+    <meta name="Copyright" content="JS" />
+    <meta name="Description" content="《地下城与勇士》DNF ImagePacks2目录的注释工具。《地下城与勇士》是由腾讯代理引进的一款超坑钱格斗网游作品，ImagePacks2是本游戏主要的贴图存放目录，WCG2011年DNF中国区总决赛一起超越充钱极限。" />
+    <meta name="Keywords" content="地下城与勇士,DNF,Dungeon&Fighter,DF,D&F,地下城,勇士,ImagePacks2,ImagePacks,横版,2D,npk,免费,鬼剑士,格斗,格斗家,神枪手,枪手,圣职,红眼,白手,鬼气,阿修罗,气功师,大枪,漫游,阿拉德,召唤兽,投币,复活币" />
+    <!--页面设计：JS | 页面制作：JS| 创建：2017-2-6 12:08:08| 作品发布地：http://bbs.exrpg.com/space-uid-631828.html -->
+    <title>JS的ImagePacks2目录注释工具♂管理员EDITION</title>
+    <link rel="icon" type="image/x-icon" href="https://assets-cdn.github.com/favicon.ico">
+    <link rel="mask-icon" href="https://assets-cdn.github.com/pinned-octocat.svg" color="#000000">
+    <link rel="stylesheet" href="css.css"/>
+</head>
+<body>
+<div class="nav_top">
+    <img src="logo.png" alt="DNF ImagePacks2 Note"/>
+    <img src="logoAdmin.png" alt="DNF ImagePacks2 Note"/>
+</div>
+<div class="nav_right">
+    <div class="space"></div>
+    <div class="board">
+        <div>
+            <img src="fan.jpg" class="head" alt="adminHead"/>
+                <span class="rightLine">
+                    管理员饭老板友情提示：<br/>
+                    如果快捷输入栏太满，到了已经影响输入的程度，说明你该及时保存数据了=）请务必及时保存以免悲剧的发生！
+                </span>
+            <hr/>
+        </div>
+        <div>
+            <img src="JS3.png" class="head" alt="adminHead"/>
+                <span class="rightLine">
+                    欢迎各位管理员加入，需要申请管理员，或有任何问题，或想曰鲍，请加马群：
+                    <a href="http://shang.qq.com/wpa/qunwpa?idkey=ed7ead2a32550976616a01f09a8f4a81f25d7a5841fd23ed1ddad01ec1db4c81">578328704</a>
+                </span>
+            <hr/>
+        </div>
+        <div>
+            <img src="JS3.png" class="head" alt="adminHead"/>
+                <span class="rightLine">
+                    欢迎大家使用本工具，管理本工具需要注册github，还没有注册github的同学请：
+                    <a target="_blank" href="https://github.com/">https://github.com/</a>
+                    <a href="https://github.com/lfjs/DNF_ImagePacks2_Note/issues" target="_blank">点击这里提交bug或建议</a>
+                </span>
+            <hr/>
+        </div>
+    </div>
+</div>
+<div class="nav_left">
+    <div class="tools">
+        <!--<div class="date">最后发布于：？</div>-->
+        <label title="将 bat 转换好的 txt 文件加入ImagePacks2目录">
+            <span class="goAdmin">加载txt</span>
+            <!--<input class="goAdmin" id="upload" type="file" name="txt" accept="text" />-->
+            <input id="upload" style="display:none;" type="file">
+        </label>
+        <button class="goAdmin" id="reload">重新加载列表</button>
+        <button class="goAdmin" id="show">展示所有信息</button>
+        <a href="guide.html" target="guide"><button class="goAdmin" id="showHelp">用法与用量♂</button></a>
+        <button class="goAdmin" id="save">保存数据</button>
+        <a href="https://lfjs.github.io/DNF_ImagePacks2_Note/"><button class="reload" id="">去查询页面</button></a>
+    </div>
+</div>
+
+<div class="wtable" id="wtable"></div>
+<ul class="inputHelp" id="inputHelp"></ul>
+<div class="help" id="help">
+    <div class="guide" id="guide">
+        <iframe name="guide" src="about:blank" frameborder="0" style="width: 100%;height: 99%"></iframe>
+    </div>
+</div>
+</body>
+<script src="admin.js"></script>
+</html>
