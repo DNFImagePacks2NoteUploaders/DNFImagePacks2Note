@@ -344,4 +344,4 @@ function myBrowser(){
 	if (userAgent.indexOf("compatible") > -1 && userAgent.indexOf("MSIE") > -1 && !isOpera) return "IE"; //判断是否IE浏览器
 }
 var mb = myBrowser();
-if ("IE" == mb) alert("本工具对IE8，及更早浏览器，存在或多或少的，不支持！");
+if ("IE" == mb) alert("本工具对IE的很多版本，存在或多或少的，不支持！");
