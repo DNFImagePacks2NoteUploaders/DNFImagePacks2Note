@@ -6,6 +6,8 @@ table{text-align: center}
     position: absolute;
 }.reload,.goAdmin,#filter,li{
      cursor: pointer;
+}tbody>tr:hover .solid{
+	background-color: transparent;
 }tbody>tr:hover{
     background-color: #79e8fc;
 
