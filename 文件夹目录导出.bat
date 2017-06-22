@@ -1,1 +1,1 @@
-dir H:地下城与勇士\ImagePacks2 >d:\13.txt
+dir d:地下城与勇士\ImagePacks2 >d:\14.txt
