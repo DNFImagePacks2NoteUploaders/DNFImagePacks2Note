@@ -11,6 +11,7 @@
     <link rel="icon" type="image/x-icon" href="https://assets-cdn.github.com/favicon.ico">
     <link rel="mask-icon" href="https://assets-cdn.github.com/pinned-octocat.svg" color="#000000">
     <link rel="stylesheet" href="css.css"/>
+    <link rel="stylesheet" href="growType.css"/>
 </head>
 <body>
     <div class="nav_top">
@@ -72,12 +73,22 @@
                 <li>茶</li>
                 <li>牛奶</li>
             </ul>
-            <div class="info" id="info">点击蓝色倒三角以筛选=）</div>
+	        <div class="infoCon" id="infoCon">
+		        <div class="info" id="info">点击蓝色倒三角以筛选=）</div>
+		        <div class="info" id="info2">Ctrl+F 以直接搜索 :-)</div>
+	        </div>
         </div>
     </div>
 
 <div class="wtable" id="wtable">
 </div>
+    <script>
+	    var body = document.getElementsByTagName('body')[0];
+	    var info = document.getElementsByClassName('info')[0];
+	    var info2 = document.getElementsByClassName('info')[1];
+	    info.style.fontSize = Math.floor(body.offsetWidth / info.innerText.length) + 'px';
+	    info2.style.fontSize = info.style.fontSize;
+    </script>
 </body>
 <script src="browser.js"></script>
 </html>

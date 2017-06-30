@@ -16,13 +16,17 @@ table{text-align: center}
     -webkit-transition:background-color .5s; /* Safari and Chrome */
     -o-transition:background-color .5s; /* Opera */
 }.info{
-     position: fixed;
+     /*position: fixed;*/
      top: 200px;
-     left: 100px;
+     left: 0px;
      color: #40B7EA;
      text-shadow: 1px 1px 0 #000;
      font-size: 100px;
-}strong{
+
+	    width: 100%;
+	    text-align: center;
+
+    }strong{
     color: red;
      text-shadow: 1px 1px 0px #900000;
 }.inputHelp>li:hover{
@@ -130,7 +134,23 @@ table{text-align: center}
         background: linear-gradient(#f7b74e,#f6ad35); /* 标准的语法（必须放在最后） */
     background-color: #f7b240;
     border: 1px solid #e78f08;
-}.tools>ul>li {
+}
+.tools li div {
+
+	background-color: transparent;
+	width: 73%;
+	height: 9px;
+	position: absolute;
+	right: 0;
+	top: 0;
+	border-radius: 0 10px 0 44px;
+	border: 1px solid transparent;
+	border-top: 0;
+	border-right: 0;
+
+
+}
+.tools li {
          background-color: #eee;
          color: #333;
          list-style-type: none;
@@ -141,6 +161,7 @@ table{text-align: center}
          border: 1px solid #ddd;
          text-shadow: -1px 1px 0 #cecece;
     display: inline-block;
+	position: relative;
 }table, th , td  {
     border: 1px solid #d3d3d3;
     border-collapse: collapse;
@@ -203,4 +224,12 @@ table{text-align: center}
     height: 43px;
 }.wtable{
     overflow: auto;
+}
+.infoCon{
+	position: fixed;
+	left: 0;
+	width: 100%;
+	text-align: center;
+	top: 200px;
+
 }

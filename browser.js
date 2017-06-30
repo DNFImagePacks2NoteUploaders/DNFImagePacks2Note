@@ -32,13 +32,25 @@ var showtable = function(json){
     }
 };
 
-var wlist = function(lst){
+var wlist = function(lst){          //填充筛选菜单
     var str = '';
     var tmp = {};
     str += '<li>全部</li>';
     for(x in lst){
         if(!tmp[lst[x]]&&lst[x]!=''){
-            str += '<li>'+lst[x]+'</li>';
+	        switch (lst[x]) {
+		        case '弹药专家':
+			        str += '<li class="gunner"><div class="dyzj"></div>'+lst[x]+'</li>';
+			        break;
+		        case '机械师':
+			        str += '<li class="gunner"><div class="jxs"></div>'+lst[x]+'</li>';
+			        break;
+		        case '枪炮师':
+			        str += '<li class="gunner"><div class="qps"></div>'+lst[x]+'</li>';
+			        break;
+		        default:
+			        str += '<li>'+lst[x]+'</li>';
+	        }
             tmp[lst[x]]=1
         }
     }
@@ -195,8 +207,8 @@ window.onload = function(){
             wtable(ip3.ImagePacks2);
         }else if(target.id.indexOf('filter')+1){
             var ft = document.getElementById('filter');
-            var info = document.getElementById('info');
-            info.style.display = 'none';
+            var infoCon = document.getElementById('infoCon');
+	        infoCon.style.display = 'none';
             list.style.left=ft.offsetLeft+10+'px';
             list.style.top=evt.clientY+'px';
             //list.childNodes[1].style.width = ft.offsetWidth+'px';

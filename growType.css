@@ -1,0 +1,17 @@
+li.gunner div.qps{
+	background-color: aqua;
+}
+li.gunner div.dyzj{
+	background-color: brown;
+}
+li.gunner div.jxs{
+	background-color: chartreuse;
+}
+li.gunner div{
+	border-color: white;
+}
+li.gunner{
+	background-color: #973ab5;
+	color: white;
+	text-shadow: -1px 1px 0 #000000;
+}
