@@ -1,11 +1,34 @@
-li.gunner div.qps{
+li.gunner>div.qps{
 	background-color: aqua;
 }
-li.gunner div.dyzj{
+li.gunner>div.dyzj{
 	background-color: brown;
 }
-li.gunner div.jxs{
+li.gunner>div.jxs{
 	background-color: chartreuse;
+}
+li.gunner.qps {
+	background-image: -webkit-linear-gradient(left,#973ab5, #e70f1d); /* Safari 5.1 - 6.0 */
+	background-image: -o-linear-gradient(right,#f7b74e,#e70f1d); /* Opera 11.1 - 12.0 */
+	background-image: -moz-linear-gradient(right,#f7b74e,#e70f1d); /* Firefox 3.6 - 15 */
+	/*background-image: linear-gradient(to right,#973ab5,#973ab5,#973ab5,#00FFFF); /!* 标准的语法（必须放在最后） *!/*/
+	background-image: linear-gradient(30deg,#973ab5,#973ab5,#973ab5,#973ab5,#973ab5,#00FFFF,#00FFFF); /* 标准的语法（必须放在最后） */
+
+}
+li.gunner.jxs{
+	background-image: -webkit-linear-gradient(left,#973ab5, #e70f1d); /* Safari 5.1 - 6.0 */
+	background-image: -o-linear-gradient(right,#f7b74e,#e70f1d); /* Opera 11.1 - 12.0 */
+	background-image: -moz-linear-gradient(right,#f7b74e,#e70f1d); /* Firefox 3.6 - 15 */
+	/*background-image: linear-gradient(to right,#973ab5,#973ab5,#973ab5,#7FFF00); /!* 标准的语法（必须放在最后） *!/*/
+	background-image: linear-gradient(30deg,#973ab5,#973ab5,#973ab5,#973ab5,#973ab5,#7FFF00,#7FFF00); /* 标准的语法（必须放在最后） */
+
+}
+li.gunner.dyzj{
+	background-image: -webkit-linear-gradient(left,#973ab5, #e70f1d); /* Safari 5.1 - 6.0 */
+	background-image: -o-linear-gradient(right,#f7b74e,#e70f1d); /* Opera 11.1 - 12.0 */
+	background-image: -moz-linear-gradient(right,#f7b74e,#e70f1d); /* Firefox 3.6 - 15 */
+	/*background-image: linear-gradient(to right,#973ab5,#973ab5,#973ab5,#A52A2A); /!* 标准的语法（必须放在最后） *!/*/
+	background-image: linear-gradient(30deg,#973ab5,#973ab5,#973ab5,#973ab5,#973ab5,#A52A2A,#A52A2A); /* 标准的语法（必须放在最后） */
 }
 li.gunner div{
 	border-color: white;
@@ -14,4 +37,8 @@ li.gunner{
 	background-color: #973ab5;
 	color: white;
 	text-shadow: -1px 1px 0 #000000;
+
+}
+li.gunner>div{
+	display: none;
 }

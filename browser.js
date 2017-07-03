@@ -40,13 +40,13 @@ var wlist = function(lst){          //填充筛选菜单
         if(!tmp[lst[x]]&&lst[x]!=''){
 	        switch (lst[x]) {
 		        case '弹药专家':
-			        str += '<li class="gunner"><div class="dyzj"></div>'+lst[x]+'</li>';
+			        str += '<li class="gunner dyzj"><div class="dyzj"></div>'+lst[x]+'</li>';
 			        break;
 		        case '机械师':
-			        str += '<li class="gunner"><div class="jxs"></div>'+lst[x]+'</li>';
+			        str += '<li class="gunner jxs"><div class="jxs"></div>'+lst[x]+'</li>';
 			        break;
 		        case '枪炮师':
-			        str += '<li class="gunner"><div class="qps"></div>'+lst[x]+'</li>';
+			        str += '<li class="gunner qps"><div class="qps"></div>'+lst[x]+'</li>';
 			        break;
 		        default:
 			        str += '<li>'+lst[x]+'</li>';
