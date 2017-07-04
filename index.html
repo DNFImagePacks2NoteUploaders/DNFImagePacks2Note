@@ -84,8 +84,8 @@
 </div>
     <script>
 	    var body = document.getElementsByTagName('body')[0];
-	    var info = document.getElementsByClassName('info')[0];
-	    var info2 = document.getElementsByClassName('info')[1];
+	    var info2 = document.getElementById('info2');
+	    var info = document.getElementById('info');
 	    info.style.fontSize = Math.floor(body.offsetWidth / info.innerText.length) + 'px';
 	    info2.style.fontSize = info.style.fontSize;
     </script>

@@ -39,6 +39,33 @@ var wlist = function(lst){          //填充筛选菜单
     for(x in lst){
         if(!tmp[lst[x]]&&lst[x]!=''){
 	        switch (lst[x]) {
+		        //-----------------------------------------
+		        case '鬼泣':
+			        str += '<li class="sword gq"><div class="gq"></div>'+lst[x]+'</li>';
+			        break;
+		        case '狂战士':
+			        str += '<li class="sword kzs"><div class="kzs"></div>'+lst[x]+'</li>';
+			        break;
+		        case '剑魂':
+			        str += '<li class="sword jh"><div class="jh"></div>'+lst[x]+'</li>';
+			        break;
+		        case '阿修罗':
+			        str += '<li class="sword axl"><div class="axl"></div>'+lst[x]+'</li>';
+			        break;
+		        //-----------------------------------------
+		        //case '剑宗':
+			     //   str += '<li class="swordAt jz"><div class="jz"></div>'+lst[x]+'</li>';
+			     //   break;
+		        //case '流浪武士':
+			     //   str += '<li class="swordAt llws"><div class="llws"></div>'+lst[x]+'</li>';
+			     //   break;
+		        //case '暗殿骑士':
+			     //   str += '<li class="swordAt adqs"><div class="adqs"></div>'+lst[x]+'</li>';
+			     //   break;
+		        //case '剑魔':
+			     //   str += '<li class="swordAt jm"><div class="jm"></div>'+lst[x]+'</li>';
+			     //   break;
+		        //-----------------------------------------
 		        case '弹药专家':
 			        str += '<li class="gunner dyzj"><div class="dyzj"></div>'+lst[x]+'</li>';
 			        break;
@@ -209,7 +236,8 @@ window.onload = function(){
             var ft = document.getElementById('filter');
             var infoCon = document.getElementById('infoCon');
 	        infoCon.style.display = 'none';
-            list.style.left=ft.offsetLeft+10+'px';
+            //list.style.left=ft.offsetLeft+10+'px';
+            list.style.left=evt.clientX+'px';
             list.style.top=evt.clientY+'px';
             //list.childNodes[1].style.width = ft.offsetWidth+'px';
             if(!list.style.display||list.style.display=='none'){
@@ -230,4 +258,14 @@ function myBrowser(){
     if (userAgent.indexOf("compatible") > -1 && userAgent.indexOf("MSIE") > -1 && !isOpera) return "IE"; //判断是否IE浏览器
 }
 var mb = myBrowser();
-if ("IE" == mb) alert("本工具对IE8，及更早浏览器，存在或多或少的，不支持！");
+if ("IE" == mb) {
+	var warning = document.createElement("span");
+	var warningText = document.createTextNode("本工具对IE10，及更早浏览器，存在或多或少的，不支持！");
+	warning.appendChild(warningText);
+	warning.className = 'info';
+	warning.style.fontSize = Math.floor(body.offsetWidth / warning.innerText.length) + 'px';
+	warning.style.color = 'red';
+	warning.style.outline = '5px solid red';
+	document.getElementById('infoCon').appendChild(warning);
+	//alert("本工具对IE10，及更早浏览器，存在或多或少的，不支持！");
+}
