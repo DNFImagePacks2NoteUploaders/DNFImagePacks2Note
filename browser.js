@@ -134,7 +134,7 @@ var wtable = function(json,c){
     for(x in json[0]){
         if(json[0][x] == '职业/类别'){
             sort = x-1;
-            str = str + '<th id="filter">' + json[0][x] + '<div class="downA"></div></th>';
+            str = str + '<th id="filter">' + json[0][x] + '<div style="position: relative;z-index: -999"><p class="downA"></p><p class="downA" id="downBg" style="position: relative;top: -10px;margin-bottom: -10px" datatype="a"></p></div></th>';
             continue
         }
         switch(c){
@@ -235,6 +235,8 @@ window.onload = function(){
         }else if(target.id.indexOf('filter')+1){
             var ft = document.getElementById('filter');
             var infoCon = document.getElementById('infoCon');
+            var downBg = document.getElementById('downBg');
+	        downBg.setAttribute("datatype","b");
 	        infoCon.style.display = 'none';
             //list.style.left=ft.offsetLeft+10+'px';
             list.style.left=evt.clientX+'px';

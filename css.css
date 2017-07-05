@@ -151,7 +151,16 @@ hr {
 	outline: 10px solid #40b7ea;
 }
 #filter {
-	/*background-color: #006666;*/
+	position: relative;
+}
+#filter:after {
+	/*background-color: white;*/
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
 }
 .tools > ul > li:hover {
 	background-color: #f7b240;
@@ -266,4 +275,51 @@ table, th, td {
 	width: 100%;
 	text-align: center;
 	top: 200px;
+}
+.downA[datatype=a]{
+	animation:downShine 2s infinite;
+	-webkit-animation:downShine 2s infinite; /* Safari and Chrome */
+}
+
+@keyframes downShine {
+	0%   {
+		transform:scale3d(1,1,1);
+		-webkit-transform:scale3d(1,1,1);
+		-moz-transform:scale3d(1,1,1);
+		opacity: 1;
+	}
+	10% {
+		transform:scale3d(15,15,15);
+		-webkit-transform:scale3d(15,15,15);
+		-moz-transform:scale3d(15,15,15);
+		opacity: 0;
+	}
+	100% {
+		transform:scale3d(1,1,1);
+		-webkit-transform:scale3d(1,1,1);
+		-moz-transform:scale3d(1,1,1);
+		opacity: 0;
+	}
+}
+
+@-webkit-keyframes downShine /* Safari and Chrome */
+{
+	0%   {
+		transform:scale3d(1,1,1);
+		-webkit-transform:scale3d(1,1,1);
+		-moz-transform:scale3d(1,1,1);
+		opacity: 1;
+	}
+	10% {
+		transform:scale3d(15,15,15);
+		-webkit-transform:scale3d(15,15,15);
+		-moz-transform:scale3d(15,15,15);
+		opacity: 0;
+	}
+	100% {
+		transform:scale3d(1,1,1);
+		-webkit-transform:scale3d(1,1,1);
+		-moz-transform:scale3d(1,1,1);
+		opacity: 0;
+	}
 }
