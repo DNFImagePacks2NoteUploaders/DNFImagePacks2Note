@@ -275,6 +275,12 @@ table, th, td {
 	width: 100%;
 	text-align: center;
 	top: 200px;
+	display: none;
+
+	-webkit-user-select: none;  /* Chrome all / Safari all */
+	-moz-user-select: none;     /* Firefox all */
+	-ms-user-select: none;      /* IE 10+ */
+	user-select: none;          /* Likely future */
 }
 .downA[datatype=a]{
 	animation:downShine 2s infinite;
@@ -322,4 +328,10 @@ table, th, td {
 		-moz-transform:scale3d(1,1,1);
 		opacity: 0;
 	}
+}
+.noMore{
+
+	font-size: large;
+	text-shadow: 1px 1px 2px #ff00e7;
+
 }
