@@ -1,6 +1,9 @@
-body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, form, input, p, th, td, s {
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, form, input, p, th, td, s ,
+
+input, textarea, keygen, select, button {
 	margin: 0;
 	padding: 0;
+	/*font-family: "Whitney SSm A", "Whitney SSm B", "Lato", "Lucida Grande", "Lucida Sans Unicode","微软雅黑", Tahoma, sans-serif*/
 	font-family: "微软雅黑", Tahoma, sans-serif
 }
 html, body {
