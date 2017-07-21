@@ -17,6 +17,7 @@ table {
 }
 .tools > ul {
 	position: absolute;
+	z-index: 1;
 }
 .reload, .goAdmin, #filter, li {
 	cursor: pointer;

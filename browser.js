@@ -7,7 +7,6 @@ var t1;
 var list = document.getElementById('filter_list');
 var lastDate = document.getElementById('date');
 window.onresize = function(){wtable1.style.height = body0.offsetHeight-86+'px'};
-
 var flt =function(str){
     var cld = document.getElementById('active_table').childNodes[1].childNodes;
     for(x=0; x< cld.length;x++){
@@ -20,7 +19,6 @@ var flt =function(str){
         }
     }
 };
-
 var showtable = function(json){
     for(x in json){
         if(typeof json[x] == 'object'){
@@ -31,7 +29,6 @@ var showtable = function(json){
         }
     }
 };
-
 var wlist = function(lst){          //填充筛选菜单
     var str = '';
     var tmp = {};
@@ -83,7 +80,6 @@ var wlist = function(lst){          //填充筛选菜单
     }
     list.innerHTML=str;
 };
-
 var check = function(){
     t1 = document.getElementById('active_table');
     var th = t1.firstChild.firstChild.childNodes;
@@ -114,17 +110,14 @@ var load = function(){
         if (xmlhttp.readyState==4 && xmlhttp.status==200){
             ip3 = JSON.parse(xmlhttp.responseText);
             wtable(ip3.ImagePacks2);
-            var c = check();
-            wtable(ip3.ImagePacks2,c);
+	        wtable(ip3.ImagePacks2,check());
             lastDate.innerText ='最后发布于：'+ new Date(ip3.ImagePacks2[0][4]).toLocaleString();
             //console.log(lastDate.innerText);
         }
     };
     xmlhttp.open("GET","ImagePacks2.json?t=" + Math.random(),true);            //which file
     xmlhttp.send();
-
     body0.style.fontSize = '16px';
-
 };
 load();
 var wtable = function(json,c){
@@ -217,8 +210,6 @@ var wtable = function(json,c){
     wtable1.innerHTML = str;
     wtable1.style.height = body0.offsetHeight-86+'px';
 };
-
-
 function getCookie(c_name) {
 	if (document.cookie.length>0) {
 		c_start=document.cookie.indexOf(c_name + "=");
@@ -231,17 +222,14 @@ function getCookie(c_name) {
 	}
 	return ""
 }
-
 function setCookie(c_name,value,expiredays) {
 	var exdate=new Date();
 	exdate.setDate(exdate.getDate()+expiredays);
 	document.cookie=c_name+ "=" +escape(value)+
 		((expiredays==null) ? "" : "; expires="+exdate.toGMTString())
 }
-
 function checkCookie() {
 	var infoCon = document.getElementById('infoCon');
-
 	bigGuide=getCookie('bigGuide');
 	if (bigGuide!=null && bigGuide!="") {
 		//alert('Welcome again '+bigGuide+'!')
@@ -254,9 +242,7 @@ function checkCookie() {
 		infoCon.style.display = 'block';
 	}
 }
-
 checkCookie();
-
 window.onload = function(){
 	document.onclick = function(e){
         var evt = e || window.event;
@@ -276,14 +262,8 @@ window.onload = function(){
             var ft = document.getElementById('filter');
             var infoCon = document.getElementById('infoCon');
             var downBg = document.getElementById('downBg');
-
-
             var showGuide = document.getElementById('showGuide');
 	        showGuide.checked?setCookie('bigGuide',1,365):void(0);
-
-
-
-
 	        downBg.setAttribute("datatype","b");
 	        infoCon.style.display = 'none';
             //list.style.left=ft.offsetLeft+10+'px';
@@ -301,7 +281,6 @@ window.onload = function(){
         }
     };
 };
-
 function myBrowser(){
     var userAgent = navigator.userAgent; //取得浏览器的userAgent字符串
     var isOpera = userAgent.indexOf("Opera") > -1;
