@@ -1,6 +1,8 @@
 /**
  * Created by JS-3 on 2017/2/6.
  */
+"use strict";
+
 var body0 = document.getElementsByTagName('body')[0];
 var wtable1 = document.getElementById('wtable');
 var t1;
@@ -9,7 +11,7 @@ var lastDate = document.getElementById('date');
 window.onresize = function(){wtable1.style.height = body0.offsetHeight-86+'px'};
 var flt =function(str){
     var cld = document.getElementById('active_table').childNodes[1].childNodes;
-    for(x=0; x< cld.length;x++){
+    for(var x=0; x< cld.length;x++){
         if(cld[x].childNodes[5].innerHTML == str){
             cld[x].style.display = 'table-row';
         }else if(str == '全部'){
@@ -20,7 +22,7 @@ var flt =function(str){
     }
 };
 var showtable = function(json){
-    for(x in json){
+    for(var x in json){
         if(typeof json[x] == 'object'){
             //console.log(x);
             showtable(json[x]);
@@ -33,7 +35,7 @@ var wlist = function(lst){          //填充筛选菜单
     var str = '';
     var tmp = {};
     str += '<li>全部</li>';
-    for(x in lst){
+    for(var x in lst){
         if(!tmp[lst[x]]&&lst[x]!=''){
 	        switch (lst[x]) {
 		        //-----------------------------------------
@@ -108,7 +110,7 @@ var load = function(){
     }
     xmlhttp.onreadystatechange=function(){
         if (xmlhttp.readyState==4 && xmlhttp.status==200){
-            ip3 = JSON.parse(xmlhttp.responseText);
+            window.ip3 = JSON.parse(xmlhttp.responseText);
             wtable(ip3.ImagePacks2);
 	        wtable(ip3.ImagePacks2,check());
             lastDate.innerText ='最后发布于：'+ new Date(ip3.ImagePacks2[0][4]).toLocaleString();
@@ -124,7 +126,7 @@ var wtable = function(json,c){
     var str='<table id="active_table"><thead><tr>';
     var sort = 0;
     var sort_list = [];
-    for(x in json[0]){
+    for(var x in json[0]){
         if(json[0][x] == '职业/类别'){
             sort = x-1;
             str = str + '<th id="filter">' + json[0][x] + '<div style="position: relative;z-index: -999"><p class="downA"></p><p class="downA" id="downBg" style="position: relative;top: -10px;margin-bottom: -10px" datatype="a"></p></div></th>';
@@ -166,7 +168,7 @@ var wtable = function(json,c){
     str = str + '</tr></thead><tbody>';
     for(x=1;x< json.length;x++){
         str = str + '<tr>' + '<td>'+ x +'</td>';
-        for(y in json[x]){
+        for(var y in json[x]){
             if(y == sort){
                 sort_list.push(json[x][y])
             }
@@ -212,10 +214,10 @@ var wtable = function(json,c){
 };
 function getCookie(c_name) {
 	if (document.cookie.length>0) {
-		c_start=document.cookie.indexOf(c_name + "=");
+		var c_start=document.cookie.indexOf(c_name + "=");
 		if (c_start!=-1) {
 			c_start=c_start + c_name.length+1;
-			c_end=document.cookie.indexOf(";",c_start);
+			var c_end=document.cookie.indexOf(";",c_start);
 			if (c_end==-1) c_end=document.cookie.length;
 			return unescape(document.cookie.substring(c_start,c_end))
 		}
@@ -230,7 +232,7 @@ function setCookie(c_name,value,expiredays) {
 }
 function checkCookie() {
 	var infoCon = document.getElementById('infoCon');
-	bigGuide=getCookie('bigGuide');
+	var bigGuide=getCookie('bigGuide');
 	if (bigGuide!=null && bigGuide!="") {
 		//alert('Welcome again '+bigGuide+'!')
 		infoCon.style.display = 'none';
@@ -244,6 +246,7 @@ function checkCookie() {
 }
 checkCookie();
 window.onload = function(){
+
 	document.onclick = function(e){
         var evt = e || window.event;
         var target = evt.target || evt.srcElement;
@@ -282,12 +285,15 @@ window.onload = function(){
     };
 };
 function myBrowser(){
+
+
     var userAgent = navigator.userAgent; //取得浏览器的userAgent字符串
     var isOpera = userAgent.indexOf("Opera") > -1;
     if (userAgent.indexOf("compatible") > -1 && userAgent.indexOf("MSIE") > -1 && !isOpera) return "IE"; //判断是否IE浏览器
 }
 var mb = myBrowser();
 if ("IE" == mb) {
+
 	var warning = document.createElement("span");
 	var warningText = document.createTextNode("本工具对IE10，及更早浏览器，存在或多或少的，不支持！");
 	warning.appendChild(warningText);
