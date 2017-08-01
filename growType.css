@@ -1,0 +1,109 @@
+li.gunner>div.qps{
+	background-color: #26b9ff;
+}
+li.gunner>div.dyzj{
+	background-color: #cc0000;
+}
+li.gunner>div.jxs{
+	background-color: #ffeb00;
+}
+/*---------------------------------------------------------------------------------------------------------*/
+
+li.sword{
+background-color: #426cde;
+color: white;
+text-shadow: -1px 1px 0 black;
+
+}
+li.sword>div.gq{
+	background-color: #920aff;
+}
+li.sword>div.axl{
+	background-color: #6cf9fd;
+}
+li.sword>div.kzs{
+	background-color: #b71515;
+}
+li.sword>div.jh{
+	background-color: #fff;
+}
+
+li.sword.gq {
+	background-image: linear-gradient(30deg,#2d4da5,#426cde,#426cde,#920aff); /* 标准的语法（必须放在最后） */
+}
+li.sword.axl {
+	background-image: linear-gradient(30deg,#2d4da5,#426cde,#426cde,#6cf9fd); /* 标准的语法（必须放在最后） */
+}
+li.sword.kzs {
+	background-image: linear-gradient(30deg,#2d4da5,#426cde,#426cde,#b71515); /* 标准的语法（必须放在最后） */
+}
+li.sword.jh {
+	background-image: linear-gradient(30deg,#2d4da5,#426cde,#426cde,#fff); /* 标准的语法（必须放在最后） */
+}
+/*---------------------------------------------------------------------------------------------------------*/
+
+/*li.swordAt.jz {*/
+	/*background-image: linear-gradient(30deg,#9a9a9a,#b9b9b9,#b9b9b9,#fff); /!* 标准的语法（必须放在最后） *!/*/
+/*}*/
+/*li.swordAt.llws {*/
+	/*background-image: linear-gradient(30deg,#9a9a9a,#b9b9b9,#b9b9b9,#fff700); /!* 标准的语法（必须放在最后） *!/*/
+/*}*/
+/*li.swordAt.adqs {*/
+	/*background-image: linear-gradient(30deg,#9a9a9a,#b9b9b9,#b9b9b9,#fb00ff); /!* 标准的语法（必须放在最后） *!/*/
+/*}*/
+/*li.swordAt.jm {*/
+	/*background-image: linear-gradient(30deg,#e8b8b9,#f8ebdb,#f8ebdb,#ff0000); /!* 标准的语法（必须放在最后） *!/*/
+/*}*/
+/*---------------------------------------------------------------------------------------------------------*/
+li.gunner.qps {
+	background-image: -webkit-linear-gradient(30deg,#864777,#b34b9a,#b34b9a,#26b9ff); /* Safari 5.1 - 6.0 */
+	background-image: -o-linear-gradient(30deg,#864777,#b34b9a,#b34b9a,#26b9ff); /* Opera 11.1 - 12.0 */
+	background-image: -moz-linear-gradient(30deg,#864777,#b34b9a,#b34b9a,#26b9ff); /* Firefox 3.6 - 15 */
+	/*background-image: linear-gradient(to right,#b34b9a,#b34b9a,#b34b9a,#26b9ff); /!* 标准的语法（必须放在最后） *!/*/
+	background-image: linear-gradient(30deg,#864777,#b34b9a,#b34b9a,#26b9ff); /* 标准的语法（必须放在最后） */
+}
+li.gunner.jxs{
+	background-image: -webkit-linear-gradient(30deg,#864777,#b34b9a,#b34b9a,#ffeb00); /* Safari 5.1 - 6.0 */
+	background-image: -o-linear-gradient(30deg,#864777,#b34b9a,#b34b9a,#ffeb00); /* Opera 11.1 - 12.0 */
+	background-image: -moz-linear-gradient(30deg,#864777,#b34b9a,#b34b9a,#ffeb00); /* Firefox 3.6 - 15 */
+	/*background-image: linear-gradient(to right,#b34b9a,#b34b9a,#b34b9a,#ffeb00); /!* 标准的语法（必须放在最后） *!/*/
+	background-image: linear-gradient(30deg,#864777,#b34b9a,#b34b9a,#ffeb00); /* 标准的语法（必须放在最后） */
+}
+li.gunner.dyzj{
+	background-image: -webkit-linear-gradient(30deg,#864777,#b34b9a,#b34b9a,#cc0000); /* Safari 5.1 - 6.0 */
+	background-image: -o-linear-gradient(30deg,#864777,#b34b9a,#b34b9a,#cc0000); /* Opera 11.1 - 12.0 */
+	background-image: -moz-linear-gradient(30deg,#864777,#b34b9a,#b34b9a,#cc0000); /* Firefox 3.6 - 15 */
+	/*background-image: linear-gradient(to right,#b34b9a,#b34b9a,#b34b9a,#cc0000); /!* 标准的语法（必须放在最后） *!/*/
+	background-image: linear-gradient(30deg,#864777,#b34b9a,#b34b9a,#cc0000); /* 标准的语法（必须放在最后） */
+}
+/*li.swordAt{*/
+	/*background-color: #b9b9b9;*/
+	/*color: black;*/
+	/*text-shadow: -1px 1px 0 white;*/
+/*}*/
+li.gunner{
+	background-color: #b34b9a;
+	color: white;
+	text-shadow: -1px 1px 0 #000000;
+
+}
+.tools li>div{
+	display: block\9; /* IE6, IE7, IE8, IE9, IE10 */;
+	border-color: white;
+
+}
+.tools li{
+
+	background: -webkit-linear-gradient(#eee,#d4d4d4); /* Safari 5.1 - 6.0 */
+	background: -o-linear-gradient(#eee,#d4d4d4); /* Opera 11.1 - 12.0 */
+	background: -moz-linear-gradient(#eee,#d4d4d4); /* Firefox 3.6 - 15 */
+	background: linear-gradient(#eee,#d4d4d4); /* 标准的语法（必须放在最后） */
+
+
+	outline: 30px solid transparent;
+
+	transition:  .2s;
+	-moz-transition:  .2s; /* Firefox 4 */
+	-webkit-transition:  .2s; /* Safari 和 Chrome */
+	-o-transition:  .2s; /* Opera */
+}
