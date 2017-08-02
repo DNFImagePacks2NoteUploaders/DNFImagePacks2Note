@@ -333,6 +333,9 @@ table, th, td {
 		opacity: 0;
 	}
 }
+.noMore label{
+	cursor: pointer;
+}
 .noMore{
 
 	font-size: large;
