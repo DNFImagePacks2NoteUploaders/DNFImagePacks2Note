@@ -290,6 +290,10 @@ table, th, td {
 	animation:downShine 2s infinite;
 	-webkit-animation:downShine 2s infinite; /* Safari and Chrome */
 }
+#filter:hover .downA[datatype=a]{
+	animation:downShineHover .5s infinite;
+	-webkit-animation:downShineHover .5s infinite; /* Safari and Chrome */
+}
 
 @keyframes downShine {
 	0%   {
@@ -321,6 +325,48 @@ table, th, td {
 		opacity: 1;
 	}
 	10% {
+		transform:scale3d(15,15,15);
+		-webkit-transform:scale3d(15,15,15);
+		-moz-transform:scale3d(15,15,15);
+		opacity: 0;
+	}
+	100% {
+		transform:scale3d(1,1,1);
+		-webkit-transform:scale3d(1,1,1);
+		-moz-transform:scale3d(1,1,1);
+		opacity: 0;
+	}
+}
+
+@keyframes downShineHover {
+    0%   {
+        transform:scale3d(1,1,1);
+        -webkit-transform:scale3d(1,1,1);
+        -moz-transform:scale3d(1,1,1);
+        opacity: 1;
+    }
+    40% {
+        transform:scale3d(15,15,15);
+        -webkit-transform:scale3d(15,15,15);
+        -moz-transform:scale3d(15,15,15);
+        opacity: 0;
+    }
+    100% {
+        transform:scale3d(1,1,1);
+        -webkit-transform:scale3d(1,1,1);
+        -moz-transform:scale3d(1,1,1);
+        opacity: 0;
+    }
+}
+@-webkit-keyframes downShineHover /* Safari and Chrome */
+{
+	0%   {
+		transform:scale3d(1,1,1);
+		-webkit-transform:scale3d(1,1,1);
+		-moz-transform:scale3d(1,1,1);
+		opacity: 1;
+	}
+	40% {
 		transform:scale3d(15,15,15);
 		-webkit-transform:scale3d(15,15,15);
 		-moz-transform:scale3d(15,15,15);
